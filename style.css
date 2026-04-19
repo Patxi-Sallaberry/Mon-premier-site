@@ -466,6 +466,142 @@ a.contact-item:hover { transform: translateX(4px); box-shadow: var(--shadow); }
 .map-desc { margin-bottom: 0.5rem; }
 .map-card .btn { margin-top: 0.75rem; font-size: 0.9rem; padding: 0.75rem 1.5rem; align-self: flex-start; }
 
+/* ── Tarifs ──────────────────────────────────────────────── */
+.tarifs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+.tarif-card {
+  background-color: var(--nav-bg);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: box-shadow var(--ease), background-color 0.3s;
+  position: relative;
+}
+
+.tarif-card:hover { box-shadow: var(--shadow); }
+
+.tarif-featured {
+  border-color: var(--accent);
+  border-width: 2px;
+  transform: scale(1.03);
+  box-shadow: 0 8px 40px rgba(193, 68, 14, 0.15);
+}
+
+.tarif-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--accent);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+
+.tarif-saison {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.tarif-periode {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: -1rem;
+}
+
+.tarif-prix {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.tarif-from { font-size: 0.78rem; color: var(--text-muted); }
+
+.tarif-amount {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--accent);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.tarif-unit { font-size: 0.85rem; color: var(--text-muted); }
+
+.tarif-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.tarif-list li {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.tarif-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.btn-outline-accent {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  text-align: center;
+  transition: background-color var(--ease), color var(--ease), transform var(--ease);
+}
+.btn-outline-accent:hover { background-color: var(--accent); color: #fff; transform: translateY(-2px); }
+
+.tarif-card .btn { text-align: center; }
+
+.tarifs-extras {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.extra-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 50px;
+}
+
 /* ── Labels section ──────────────────────────────────────── */
 .labels-section {
   background-color: var(--bg-warm);
@@ -549,6 +685,8 @@ footer {
 @media (max-width: 1000px) {
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .highlights-grid { grid-template-columns: repeat(2, 1fr); }
+  .tarifs-grid { grid-template-columns: 1fr; }
+  .tarif-featured { transform: none; }
 }
 
 @media (max-width: 900px) {
