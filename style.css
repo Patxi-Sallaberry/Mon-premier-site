@@ -1,0 +1,133 @@
+/* ── Variables ───────────────────────────────────────────── */
+:root {
+  --couleur-fond:       #f8f8f8;
+  --couleur-texte:      #1a1a2e;
+  --couleur-accent:     #6c63ff;
+  --couleur-accent-hover: #574fd6;
+  --couleur-nav:        #ffffff;
+  --couleur-footer:     #1a1a2e;
+  --ombre:              0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Reset & base ────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-color: var(--couleur-fond);
+  color: var(--couleur-texte);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ── Navigation ──────────────────────────────────────────── */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--couleur-nav);
+  box-shadow: var(--ombre);
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--couleur-accent);
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--couleur-texte);
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--couleur-accent);
+}
+
+/* ── Section hero ────────────────────────────────────────── */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin-bottom: 1.25rem;
+  background: linear-gradient(135deg, var(--couleur-texte) 40%, var(--couleur-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--couleur-accent);
+  color: #fff;
+  padding: 0.85rem 2.2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.2s, transform 0.2s;
+  box-shadow: 0 4px 14px rgba(108, 99, 255, 0.35);
+}
+
+.btn:hover {
+  background-color: var(--couleur-accent-hover);
+  transform: translateY(-2px);
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+footer {
+  background-color: var(--couleur-footer);
+  color: #aaa;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.9rem;
+}
