@@ -1,12 +1,22 @@
 /* ── Variables ───────────────────────────────────────────── */
 :root {
-  --couleur-fond:       #f8f8f8;
-  --couleur-texte:      #1a1a2e;
-  --couleur-accent:     #6c63ff;
-  --couleur-accent-hover: #574fd6;
-  --couleur-nav:        #ffffff;
-  --couleur-footer:     #1a1a2e;
-  --ombre:              0 4px 24px rgba(0, 0, 0, 0.08);
+  --couleur-fond:            #f8f8f8;
+  --couleur-texte:           #1a1a2e;
+  --couleur-texte-secondaire:#555555;
+  --couleur-accent:          #6c63ff;
+  --couleur-accent-hover:    #574fd6;
+  --couleur-nav:             #ffffff;
+  --couleur-footer:          #1a1a2e;
+  --ombre:                   0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] {
+  --couleur-fond:            #0f0f1a;
+  --couleur-texte:           #e8e8f4;
+  --couleur-texte-secondaire:#9090b0;
+  --couleur-nav:             #16162a;
+  --couleur-footer:          #08080f;
+  --ombre:                   0 4px 24px rgba(0, 0, 0, 0.35);
 }
 
 /* ── Reset & base ────────────────────────────────────────── */
@@ -23,6 +33,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 a {
@@ -37,6 +48,7 @@ header {
   z-index: 100;
   background-color: var(--couleur-nav);
   box-shadow: var(--ombre);
+  transition: background-color 0.3s;
 }
 
 .navbar {
@@ -101,9 +113,10 @@ main {
 
 .hero p {
   font-size: 1.15rem;
-  color: #555;
+  color: var(--couleur-texte-secondaire);
   line-height: 1.7;
   margin-bottom: 2.5rem;
+  transition: color 0.3s;
 }
 
 .btn {
@@ -130,4 +143,62 @@ footer {
   text-align: center;
   padding: 1.5rem 2rem;
   font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+/* ── Toggle mode sombre ──────────────────────────────────── */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.toggle-track {
+  width: 52px;
+  height: 28px;
+  background-color: #d0d0e0;
+  border-radius: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  transition: background-color 0.3s;
+}
+
+.toggle-track::after {
+  content: '☀';
+  position: absolute;
+  right: 7px;
+  font-size: 13px;
+  line-height: 1;
+  transition: opacity 0.2s;
+}
+
+.toggle-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+[data-theme="dark"] .toggle-track {
+  background-color: var(--couleur-accent);
+}
+
+[data-theme="dark"] .toggle-track::after {
+  content: '☽';
+  right: auto;
+  left: 7px;
+}
+
+[data-theme="dark"] .toggle-thumb {
+  transform: translateX(24px);
 }
