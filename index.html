@@ -3,61 +3,198 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mon Premier Site</title>
+    <title>La Table de Larrouleta — Restaurant au Pays Basque</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
 
-    <!-- Barre de navigation -->
+    <!-- Navigation -->
     <header>
       <nav class="navbar">
-        <a href="#" class="logo">MonSite</a>
+        <a href="#" class="logo">
+          <span>La Table</span>
+          <em>de Larrouleta</em>
+        </a>
         <ul class="nav-links">
-          <li><a href="#">Accueil</a></li>
-          <li><a href="#">À propos</a></li>
-          <li><a href="#">Projets</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#cuisine">La Carte</a></li>
+          <li><a href="#terrasse">Terrasse</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-        <button class="theme-toggle" id="themeToggle" aria-label="Basculer le mode sombre">
-          <span class="toggle-track">
-            <span class="toggle-thumb"></span>
-          </span>
-        </button>
+        <div class="nav-actions">
+          <a href="#contact" class="btn-nav">Réserver</a>
+          <button class="theme-toggle" id="themeToggle" aria-label="Basculer le thème">
+            <span class="toggle-track"><span class="toggle-thumb"></span></span>
+          </button>
+        </div>
       </nav>
     </header>
 
-    <!-- Contenu principal -->
     <main>
+
+      <!-- Hero -->
       <section class="hero">
-        <h1>Bienvenue sur mon site ✦</h1>
-        <p>Un espace pour partager mes projets, mes idées et ma passion pour le web.</p>
-        <a href="#" class="btn">Découvrir</a>
+        <div class="hero-content">
+          <p class="eyebrow">Restaurant · Urrugne · Pays Basque</p>
+          <h1>Saveurs du Pays Basque,<br><span>au bord du lac</span></h1>
+          <p>Pizzas maison, spécialités basques et terrasse ensoleillée — ouverts de février à novembre.</p>
+          <div class="hero-btns">
+            <a href="#cuisine" class="btn btn-light">Voir la carte</a>
+            <a href="#contact" class="btn btn-ghost">Nous trouver →</a>
+          </div>
+        </div>
       </section>
+
+      <!-- Spécialités -->
+      <section class="section" id="cuisine">
+        <div class="container">
+          <div class="section-head">
+            <span class="tag">La Carte</span>
+            <h2>Une cuisine généreuse,<br>ancrée dans le terroir</h2>
+            <p>Le Chef compose ses assiettes avec des produits locaux, dans le respect des saveurs basques.</p>
+          </div>
+          <div class="grid-4">
+            <article class="card">
+              <div class="card-emoji">🍕</div>
+              <h3>Pizzas maison</h3>
+              <p>Pâtes fraîches préparées chaque jour, garnies de produits du terroir basque.</p>
+            </article>
+            <article class="card">
+              <div class="card-emoji">🦑</div>
+              <h3>Spécialités basques</h3>
+              <p>Calmars à la plancha, confit de canard et saveurs authentiques du Pays Basque.</p>
+            </article>
+            <article class="card">
+              <div class="card-emoji">🥗</div>
+              <h3>Salades & burgers</h3>
+              <p>Recettes généreuses pour tous les appétits, adaptées aux petits et aux grands.</p>
+            </article>
+            <article class="card">
+              <div class="card-emoji">🍦</div>
+              <h3>Glaces & desserts</h3>
+              <p>Une sélection de douceurs pour terminer le repas en beauté.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Terrasse -->
+      <section class="section section-warm" id="terrasse">
+        <div class="container split">
+          <div>
+            <span class="tag">La Terrasse</span>
+            <h2>Les pieds dans l'herbe,<br>les yeux sur le lac</h2>
+            <p>Notre terrasse s'ouvre sur le lac du camping Larrouleta, dans un cadre naturel d'exception au cœur du Pays Basque. Un moment suspendu, entre montagne et côte Atlantique.</p>
+            <ul class="list-check">
+              <li>Terrasse en bord de lac</li>
+              <li>Ambiance familiale et décontractée</li>
+              <li>Ouverte aux campeurs et aux visiteurs extérieurs</li>
+            </ul>
+          </div>
+          <div class="landscape-visual">
+            <div class="landscape-badge">⭐ Rénové en 2019</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-head">
+            <span class="tag">Nos Services</span>
+            <h2>Tout pour votre confort</h2>
+          </div>
+          <div class="grid-4">
+            <div class="service">
+              <div class="service-icon">🍽️</div>
+              <h4>Sur place</h4>
+              <p>Salle intérieure chaleureuse, rénovée et climatisée.</p>
+            </div>
+            <div class="service">
+              <div class="service-icon">🌿</div>
+              <h4>Terrasse</h4>
+              <p>Tables en extérieur face au lac pour profiter des beaux jours.</p>
+            </div>
+            <div class="service">
+              <div class="service-icon">🛖</div>
+              <h4>À votre emplacement</h4>
+              <p>Service de livraison directement sur votre emplacement de camping.</p>
+            </div>
+            <div class="service">
+              <div class="service-icon">🧺</div>
+              <h4>Épicerie</h4>
+              <p>Produits locaux, pain frais et viennoiseries chaque matin.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact & Horaires -->
+      <section class="section section-warm" id="contact">
+        <div class="container split">
+          <div>
+            <span class="tag">Nous trouver</span>
+            <h2>Horaires & Contact</h2>
+            <div class="horaires-table">
+              <div class="h-row">
+                <span class="h-period">Fév – mi-avril &amp; oct – nov</span>
+                <span class="h-time">Soirs uniquement</span>
+              </div>
+              <div class="h-row h-highlight">
+                <span class="h-period">Mi-avril – fin septembre</span>
+                <span class="h-time">Toute la journée</span>
+              </div>
+            </div>
+            <div class="contact-block">
+              <p>📍 210 Rue de Socoa, 64122 Urrugne</p>
+              <div class="social-links">
+                <a href="https://www.instagram.com/latabledelarrouleta/" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.facebook.com/latabledelarrouleta/" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://www.larrouleta.com" target="_blank" rel="noopener">Camping Larrouleta</a>
+              </div>
+            </div>
+          </div>
+          <div class="map-card">
+            <div class="map-pin-icon">📍</div>
+            <h4>210 Rue de Socoa</h4>
+            <p>64122 Urrugne, Pays Basque</p>
+            <p class="map-desc">À 5 min de Saint-Jean-de-Luz, au cœur du camping Larrouleta.</p>
+            <a href="https://maps.google.com/?q=La+Table+de+Larrouleta+Urrugne+64122" target="_blank" rel="noopener" class="btn btn-primary">
+              Ouvrir dans Google Maps
+            </a>
+          </div>
+        </div>
+      </section>
+
     </main>
 
-    <!-- Pied de page -->
+    <!-- Footer -->
     <footer>
-      <p>© 2026 MonSite — Fait avec passion</p>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span>La Table de Larrouleta</span>
+          <em>Restaurant au Pays Basque</em>
+        </div>
+        <p>210 Rue de Socoa · 64122 Urrugne · Pays Basque</p>
+        <p>Ouvert de février à novembre</p>
+        <nav class="footer-nav">
+          <a href="https://www.instagram.com/latabledelarrouleta/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/latabledelarrouleta/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.larrouleta.com" target="_blank" rel="noopener">Camping Larrouleta</a>
+        </nav>
+      </div>
     </footer>
 
-  <script>
-    const toggle = document.getElementById('themeToggle');
-    const html   = document.documentElement;
+    <script>
+      const toggle = document.getElementById('themeToggle');
+      const html   = document.documentElement;
+      if (localStorage.getItem('theme') === 'dark') html.setAttribute('data-theme', 'dark');
+      toggle.addEventListener('click', () => {
+        const dark = html.getAttribute('data-theme') === 'dark';
+        dark ? html.removeAttribute('data-theme') : html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', dark ? 'light' : 'dark');
+      });
+    </script>
 
-    if (localStorage.getItem('theme') === 'dark') {
-      html.setAttribute('data-theme', 'dark');
-    }
-
-    toggle.addEventListener('click', () => {
-      const isDark = html.getAttribute('data-theme') === 'dark';
-      if (isDark) {
-        html.removeAttribute('data-theme');
-        localStorage.setItem('theme', 'light');
-      } else {
-        html.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-      }
-    });
-  </script>
   </body>
 </html>
